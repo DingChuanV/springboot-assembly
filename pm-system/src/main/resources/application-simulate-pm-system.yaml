@@ -20,4 +20,4 @@ server:
     include-stacktrace: ALWAYS
     include-exception: true
   servlet:
-    context-path: /pm-system-simulate
+    context-path: /pm-system

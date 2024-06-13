@@ -21,4 +21,4 @@ server:
     include-stacktrace: ALWAYS
     include-exception: true
   servlet:
-    context-path: /system-simulate
+    context-path: /system
