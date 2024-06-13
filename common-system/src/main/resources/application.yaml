@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: common-system
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: false
+        namespace: dev
+    service-registry:
+      auto-registration:
+        enabled: false
+

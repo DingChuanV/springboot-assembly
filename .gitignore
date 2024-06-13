@@ -1,0 +1,15 @@
+# common ignores
+.DS_Store
+
+# java project files
+target/
+.settings/
+.classpath
+.project
+bin
+.idea
+*.iml
+
+dist/
+log/
+

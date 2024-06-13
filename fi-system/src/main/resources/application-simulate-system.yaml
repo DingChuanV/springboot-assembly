@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: system-simulate
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    service-registry:
+      auto-registration:
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+        namespace: dev
+
+server:
+  port: 9060
+  error:
+    include-stacktrace: ALWAYS
+    include-exception: true
+  servlet:
+    context-path: /system-simulate

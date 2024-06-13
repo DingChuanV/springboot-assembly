@@ -1,0 +1,23 @@
+spring:
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: pm-system
+  cloud:
+    service-registry:
+      auto-registration:
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+        namespace: dev
+server:
+  port: 9070
+  error:
+    include-stacktrace: ALWAYS
+    include-exception: true
+  servlet:
+    context-path: /pm-system
