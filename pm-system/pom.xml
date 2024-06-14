@@ -89,7 +89,7 @@
             <artifactId>spring-boot-maven-plugin</artifactId>
             <version>2.7.3</version>
             <configuration>
-              <mainClass>com.test.a2.A2Application</mainClass>
+              <mainClass>com.test.a2.PmSystemApplication</mainClass>
               <classifier>exec</classifier>
               <excludes>
                 <exclude>

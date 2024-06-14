@@ -6,17 +6,16 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.PropertySource;
 
 @EnableDiscoveryClient
 @EnableAspectJAutoProxy
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan(basePackageClasses = {A2Application.class})
-public class A2Application {
+@ComponentScan(basePackageClasses = {PmSystemApplication.class})
+public class PmSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(A2Application.class, args);
+        SpringApplication.run(PmSystemApplication.class, args);
     }
 
 }

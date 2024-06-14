@@ -1,7 +1,7 @@
 package com.test.assembly;
 
 import com.test.a1.FiSystemApplication;
-import com.test.a2.A2Application;
+import com.test.a2.PmSystemApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -94,7 +94,7 @@ public class AssemblyApplication {
       System.setProperty("spring.application.admin.enabled", "false");
       String[] a1Args = new String[]{"--spring.application.name=pm-system"};
       final ConfigurableApplicationContext context =
-          new SpringApplicationBuilder(A2Application.class)
+          new SpringApplicationBuilder(PmSystemApplication.class)
               .properties("spring.cloud.service-registry.auto-registration.enabled=true")
               .properties("spring.cloud.nacos.discovery.enabled=true")
               .properties("server.port=9070")
@@ -117,7 +117,7 @@ public class AssemblyApplication {
       System.setProperty("spring.application.admin.enabled", "false");
       String[] a1Args = new String[]{"--spring.application.name=pm-system-simulate"};
       final ConfigurableApplicationContext context =
-          new SpringApplicationBuilder(A2Application.class)
+          new SpringApplicationBuilder(PmSystemApplication.class)
               .properties("spring.cloud.service-registry.auto-registration.enabled=true")
               .properties("spring.cloud.nacos.discovery.enabled=true")
               .properties("server.port=9070")
