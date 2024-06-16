@@ -14,6 +14,7 @@ spring:
         server-addr: 127.0.0.1:8848
         enabled: true
         namespace: dev
+        instance-id: pm-system-simulate
 server:
   port: 9070
   error:

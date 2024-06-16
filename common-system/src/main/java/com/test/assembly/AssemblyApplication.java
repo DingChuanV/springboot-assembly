@@ -43,13 +43,13 @@ public class AssemblyApplication {
       System.setProperty("spring.application.admin.enabled", "false");
       final ConfigurableApplicationContext context =
           new SpringApplicationBuilder(FiSystemApplication.class)
-              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
-              .properties("spring.cloud.nacos.discovery.enabled=true")
-              .properties("server.port=9060")
-              .properties("spring.application.name=system")
-              .properties("spring.cloud.nacos.discovery.instance-id=system")
-              .properties("spring.jmx.default-domain=system-jmx")
               .profiles("real-system")
+//              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
+//              .properties("spring.cloud.nacos.discovery.enabled=true")
+//              .properties("server.port=9060")
+//              .properties("spring.application.name=system")
+//              .properties("spring.cloud.nacos.discovery.instance-id=system")
+              .properties("spring.jmx.default-domain=system-jmx")
               .sources(RefreshScope.class)
               .run(a1Args);
       log.info("system port: " + context.getEnvironment().getProperty("server.port"));
@@ -66,13 +66,13 @@ public class AssemblyApplication {
       System.setProperty("spring.application.admin.enabled", "false");
       final ConfigurableApplicationContext context =
           new SpringApplicationBuilder(FiSystemApplication.class)
-              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
-              .properties("spring.cloud.nacos.discovery.enabled=true")
-              .properties("server.port=9060")
-              .properties("spring.application.name=system-simulate")
-              .properties("spring.cloud.nacos.discovery.instance-id=system-simulate")
-              .properties("spring.jmx.default-domain=system-simulate-jmx")
               .profiles("simulate-system")
+//              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
+//              .properties("spring.cloud.nacos.discovery.enabled=true")
+//              .properties("server.port=9060")
+//              .properties("spring.application.name=system-simulate")
+//              .properties("spring.cloud.nacos.discovery.instance-id=system-simulate")
+              .properties("spring.jmx.default-domain=system-simulate-jmx")
               .sources(RefreshScope.class)
               .run(a1Args);
 
@@ -95,13 +95,13 @@ public class AssemblyApplication {
       String[] a1Args = new String[]{"--spring.application.name=pm-system"};
       final ConfigurableApplicationContext context =
           new SpringApplicationBuilder(PmSystemApplication.class)
-              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
-              .properties("spring.cloud.nacos.discovery.enabled=true")
-              .properties("server.port=9070")
-              .properties("spring.application.name=pm-system")
-              .properties("spring.cloud.nacos.discovery.instance-id=pm-system")
-              .properties("spring.jmx.default-domain=pm-system-jmx")
               .profiles("real-pm-system")
+//              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
+//              .properties("spring.cloud.nacos.discovery.enabled=true")
+//              .properties("server.port=9070")
+//              .properties("spring.application.name=pm-system")
+//              .properties("spring.cloud.nacos.discovery.instance-id=pm-system")
+              .properties("spring.jmx.default-domain=pm-system-jmx")
               .sources(RefreshScope.class)
               .run(a1Args);
       log.info("pm-system port: " + context.getEnvironment().getProperty("server.port"));
@@ -118,13 +118,13 @@ public class AssemblyApplication {
       String[] a1Args = new String[]{"--spring.application.name=pm-system-simulate"};
       final ConfigurableApplicationContext context =
           new SpringApplicationBuilder(PmSystemApplication.class)
-              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
-              .properties("spring.cloud.nacos.discovery.enabled=true")
-              .properties("server.port=9070")
-              .properties("spring.application.name=pm-system-simulate")
-              .properties("spring.cloud.nacos.discovery.instance-id=pm-system-simulate")
-              .properties("spring.jmx.default-domain=pm-system-simulate-jmx")
               .profiles("simulate-pm-system")
+//              .properties("spring.cloud.service-registry.auto-registration.enabled=true")
+//              .properties("spring.cloud.nacos.discovery.enabled=true")
+//              .properties("server.port=9070")
+//              .properties("spring.application.name=pm-system-simulate")
+//              .properties("spring.cloud.nacos.discovery.instance-id=pm-system-simulate")
+              .properties("spring.jmx.default-domain=pm-system-simulate-jmx")
               .sources(RefreshScope.class)
               .run(a1Args);
       log.info("pm-system-simulate:{}", a1Args);
