@@ -4,7 +4,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: pm-system-simulate
+    name: pm-system
   cloud:
     service-registry:
       auto-registration:

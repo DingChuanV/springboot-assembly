@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: pm-system
+  cloud:
+    nacos:
+      config:
+        namespace: dev
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+  profiles:
+    active: real
